@@ -1,57 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
 
-body{
-    background-color: bisque;
-    font-family: 'Fredoka', sans-serif;
+body {
+  background-color: bisque;
+  font-family: "Fredoka", sans-serif;
 }
-.titulo{
-    font-size: 75px;
-    color:white;
-}
-
-label{
-    background-color: tomato;
-    width: 310 px;
-    height: 50 px;
+.titulo {
+  font-size: 75px;
+  color: white;
 }
 
-input{
-    background-color: aqua;
-    width: 310 px;
-    height: 50 px;
+label {
+  background-color: tomato;
+  width: 310 px;
+  height: 50 px;
 }
 
-button{
-    width: 310 px;
-    height: 50 px;
+input {
+  background-color: aqua;
+  width: 310 px;
+  height: 50 px;
 }
 
-#seleccionar-mascota{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+button {
+  width: 310 px;
+  height: 50 px;
 }
 
-.tarjetas  , .tarjetas-ataques{
-    display: flex ;
-    gap: 10px;
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.tarjeta-de-mokepon{
-    font-size: 18px;
-    width: 180px;
-    height: 100px;
-    background-color:burlywood;
-    padding:10px ;
-    box-sizing: border-box;
-    margin: 10px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: white;
+.tarjetas,
+.tarjetas-ataques {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+  font-size: 18px;
+  width: 180px;
+  height: 100px;
+  background-color: burlywood;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
 }
 /* 
 .tarjeta-de-mokepon:focus {
@@ -59,87 +60,102 @@ button{
   }
    */
 
-.tarjeta-de-mokepon img{
-    width: 80px;
+.tarjeta-de-mokepon img {
+  width: 80px;
 }
 
-#boton-mascota{
-    width: 180px;
-    height: 40px;
-    border-radius: 20px;
-    background:transparent;
-    border: 2px solid black;
-    color: black;
-    margin: 20px;
-}
- 
-input{
-    display: none;
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  margin: 20px;
 }
 
+input {
+  display: none;
+}
 
 input:checked + label {
-
-    background-color: rgb(245, 197, 107);
+  background-color: rgb(245, 197, 107);
 }
 
-#seleccionar-ataque{
+#seleccionar-ataque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton-de-ataque {
+  background-color: burlywood;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  width: 80px;
+  color: black;
+}
+
+#mensajes {
+  width: 280px;
+  background: pink;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boton-reiniciar {
+  border: transparent;
+  color: black;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  text-align: center;
+}
+
+#ver-mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ver-mapa button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .tarjetas,
+  .tarjetas-ataques {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 390px) {
+  .titulo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-
+  }
 }
 
-.boton-de-ataque{
-    background-color: burlywood;
-    border-radius: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    background: transparent;
-    width: 80px;
-    color: black;
-
-    
-    
-}
-
-#mensajes{
-    width: 280px;
-    background: pink;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-#boton-reiniciar{
-    border: transparent;
-    color: black;
-}
-
-.ataques{
-    display: grid;
-    grid-template-columns: 100px 100px;
-    text-align: center;
-}
-
-#ver-mapa{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#mapa{
-    border: 2px solid white;
-}
-
-@media (max-width: 390px ){
-
-.tarjetas , .tarjetas-ataques{
-
-    flex-direction: column;
-}
-
+@media (max-width: 390px) {
+  #ver-mapa div {
+    /* display: flex;
+        align-items: center;
+        flex-direction: column; */
+    width: 20;
+    height: 35;
+  }
 }
